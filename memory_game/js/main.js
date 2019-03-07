@@ -64,6 +64,15 @@ var flipCard = function()
 
 };
 
+var resetBoard = function(){
+	
+		var imgList = document.querySelectorAll('img');
+		for (var i = 0; i < imgList.length; i++){
+			imgList[i].setAttribute('src','images/back.png');
+		}
+
+	
+};
 
 var createBoard = function(){
 
@@ -79,4 +88,7 @@ var createBoard = function(){
 };
 
 createBoard();
+
+var resetbtn =  document.getElementById('reset');
+resetbtn.addEventListener('click', resetBoard);
 
